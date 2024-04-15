@@ -1,0 +1,149 @@
+@property --main-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsl(210, 62%, 45%);
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #ccddef;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.navList {
+  display: flex;
+}
+
+.navList > li {
+  display: flex;
+  align-items: center;
+  border-left: 1px var(--main-color) solid;
+  color: var(--main-color);
+  padding: 5px 20px;
+}
+
+.dropdownBtn {
+  position: relative;
+}
+
+.dropdownBtn::after {
+  position: absolute;
+  content: ">";
+  top: 15px;
+  font-size: 10px;
+  transform: rotate(90deg);
+  right: 10px;
+}
+
+.dropdownBtn:hover {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.dropdownBtn:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  position: absolute;
+  display: none;
+  list-style: none;
+  padding: 0;
+  width: 195px;
+  top: 36px;
+  left: -1px;
+  background-color: var(--main-color);
+}
+
+.dropdown li {
+  padding: 5px 20px;
+}
+
+.dropdown li:hover {
+  background-color: #fff;
+  color: var(--main-color);
+}
+
+.searchGroup {
+  display: flex;
+  border: 1px var(--main-color) solid;
+  padding: 2px;
+}
+
+.searchGroup input {
+  border: none;
+  background: transparent;
+}
+
+.searchGroup input:focus {
+  outline: none;
+}
+
+.searchGroup button {
+  display: flex;
+  align-items: center;
+  background-color: var(--main-color);
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.shoppingCart {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.shoppingCart img {
+  width: 13px;
+  height: auto;
+}
+
+.badge {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: -5px;
+  left: -5px;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
