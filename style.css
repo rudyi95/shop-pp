@@ -10,12 +10,14 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto";
 }
 
 .root {
   height: 100%;
   background-image: url("./assets/background.png");
   background-repeat: repeat;
+  overflow: auto;
 }
 
 ul {
@@ -47,6 +49,7 @@ nav {
   align-items: center;
   gap: 15px;
 }
+
 .navList {
   display: flex;
 }
@@ -79,6 +82,8 @@ nav {
 
 .dropdownBtn:hover .dropdown {
   display: block;
+  z-index: 1;
+  padding: 7px;
 }
 
 .dropdown {
@@ -200,3 +205,142 @@ nav {
   font-size: 3rem;
 }
 
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.centerDivContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+}
+
+aside {
+  width: 100%;
+  max-width: 200px;
+  background-color: rgb(255, 255, 255, 15%);
+  border-right: 1px solid white;
+  color: white;
+}
+
+.asideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px 20px 20px;
+}
+
+.asideContainer input,
+label {
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+
+.productsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productsHeader h2 {
+  font-size: 45px;
+  margin: 10px 0 30px;
+}
+
+.productsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 235px;
+  border: 1px solid white;
+}
+
+.imageContainer {
+  position: relative;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255, 70%);
+}
+
+.itemImageActions {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  top: 5px;
+  right: 5px;
+}
+
+.actionIcon {
+  padding: 1px;
+  border: 1px solid #2c71b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.actionIcon:hover {
+  background-color: #2c71b8;
+}
+
+.actionIcon img {
+  width: 100%;
+  height: auto;
+}
+
+.actionIcon:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(353deg)
+    brightness(103%) contrast(103%);
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 15px 0;
+}
+
+.cardInfo h1 {
+  margin: 0;
+}
+
+.cardPrice {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.cardBtnGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 0 30px;
+}
+
+.cardBtnGroup button {
+  width: 210px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  background-color: #2c71b8;
+  border: 2px solid white;
+}
